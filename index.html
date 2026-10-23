@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbería Black | Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+    header {
+      padding: 22px;
+      text-align: center;
+      background: #202020;
+      border-bottom: 2px solid #c99b54;
+    }
+    header h2 { margin: 0; color: #e6bd79; }
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #29231c, #111);
+    }
+    .hero h1 { font-size: 42px; margin: 10px 0; }
+    .hero p { color: #ddd; line-height: 1.7; }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 22px;
+      background: #c99b54;
+      color: #111;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    section { padding: 35px 20px; text-align: center; }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .service {
+      background: #202020;
+      border: 1px solid #45403a;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 270px;
+      flex: 1 1 200px;
+    }
+    .service h3 { color: #e6bd79; }
+    .service p { color: #ddd; line-height: 1.6; }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #202020;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>BARBERÍA BLACK</h2>
+    <p>ESTILO · PRECISIÓN · PERSONALIDAD</p>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p>BIENVENIDO A BARBERÍA BLACK</p>
+      <h1>Tu estilo, tu identidad.</h1>
+      <p>Descubre nuestros servicios y encuentra tu próximo estilo.</p>
+      <a class="btn" href="#servicios">Ver servicios</a>
+    </div>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="services">
+        <article class="service">
+          <h3>Corte clásico</h3>
+          <p>Un estilo limpio para cualquier ocasión.</p>
+        </article>
+        <article class="service">
+          <h3>Fade</h3>
+          <p>Un degradado moderno y personalizado.</p>
+        </article>
+        <article class="service">
+          <h3>Barba</h3>
+          <p>Perfilado y arreglo de barba.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Visítanos</h2>
+      <p><p>¿Listo para renovar tu estilo? Conoce nuestros servicios y elige tu próximo look.</p></p><a class="btn" href="#servicios">Ver nuestros servicios</a>
+      <p>Esta página es una demostración de MANDO WEB STUDIO.</p>
+    </section>
+  </main>
+
+  <footer>
+    Demo creada por MANDO WEB STUDIO
+  </footer>
+</body>
+</html>
