@@ -232,11 +232,66 @@ nav a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Bienvenida de BARBERÍA BLACK */
+#bienvenida {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #080808;
+  color: #d6ad60;
+  animation: salidaBienvenida 1s ease 2s forwards;
+}
+
+#bienvenida h1 {
+  font-size: clamp(2rem, 8vw, 4rem);
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 0 16px;
+  animation: entradaLogo 1s ease both;
+}
+
+#bienvenida p {
+  color: #fff;
+  letter-spacing: 3px;
+  margin-top: 16px;
+  animation: entradaLogo 1s ease 0.3s both;
+}
+
+@keyframes entradaLogo {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes salidaBienvenida {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
 </style>
 </head>
 
 <body>
+  
+  <div id="bienvenida">
+    <h1>BARBERÍA BLACK</h1>
+    <p>ESTILO • ELEGANCIA • DISTINCIÓN</p>
+  </div>
+
   <header>
+
     <div class="logo">✂ BARBERÍA BLACK</div>
     <nav>
       <a href="#inicio">Inicio</a>
