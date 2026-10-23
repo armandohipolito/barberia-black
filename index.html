@@ -401,5 +401,13 @@ secciones.forEach((seccion) => {
   observador.observe(seccion);
 });
 </script>
+<script>
+setTimeout(function () {
+  const bienvenida = document.getElementById("bienvenida");
+  if (bienvenida) {
+    bienvenida.style.display = "none";
+  }
+}, 3000);
+</script>
 </body>
 </html>
