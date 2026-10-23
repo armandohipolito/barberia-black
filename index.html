@@ -218,7 +218,19 @@ nav a:hover {
 
 .card:hover img {
   transform: scale(1.08);
-}}</style>
+}}
+/* Animación al aparecer las secciones */
+.seccion-animada {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.seccion-animada.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
