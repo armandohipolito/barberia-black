@@ -4,105 +4,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barbería Black | Demo</title>
+  <title>BARBERÍA BLACK | Estilo y elegancia</title>
   <style>
+    :root {
+      --gold: #d6ad60;
+      --black: #0b0b0b;
+      --card: #171717;
+      --white: #f7f2e8;
+    }
+
     * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
+      background: var(--black);
+      color: var(--white);
       font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      line-height: 1.6;
     }
+
     header {
-      padding: 22px;
+      padding: 20px;
       text-align: center;
-      background: #202020;
-      border-bottom: 2px solid #c99b54;
+      border-bottom: 1px solid #3b3020;
     }
-    header h2 { margin: 0; color: #e6bd79; }
+
+    .logo {
+      color: var(--gold);
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    nav a:hover { color: var(--gold); }
+
     .hero {
-      padding: 75px 20px;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #29231c, #111);
+      padding: 55px 20px;
+      background:
+        linear-gradient(#0009, #000b),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
     }
-    .hero h1 { font-size: 42px; margin: 10px 0; }
-    .hero p { color: #ddd; line-height: 1.7; }
+
+    .hero h1 {
+      color: var(--gold);
+      font-size: clamp(36px, 7vw, 62px);
+      margin: 0;
+    }
+
+    .hero p { font-size: 18px; }
+
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 13px 22px;
-      background: #c99b54;
+      background: var(--gold);
       color: #111;
+      padding: 12px 22px;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
+      margin-top: 12px;
     }
-    section { padding: 35px 20px; text-align: center; }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 20px;
     }
-    .service {
-      background: #202020;
-      border: 1px solid #45403a;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 270px;
-      flex: 1 1 200px;
-    }
-    .service h3 { color: #e6bd79; }
-    .service p { color: #ddd; line-height: 1.6; }
-    footer {
-      padding: 20px;
+
+    h2 {
       text-align: center;
-      background: #202020;
+      color: var(--gold);
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .services, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #3b3020;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3 { margin-bottom: 5px; }
+
+    .price {
+      color: var(--gold);
+      font-size: 25px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .info {
+      background: var(--card);
+      border: 1px solid #3b3020;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .gold { color: var(--gold); }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 1px solid #3b3020;
       color: #bbb;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h2>BARBERÍA BLACK</h2>
-    <p>ESTILO · PRECISIÓN · PERSONALIDAD</p>
+    <div class="logo">✂ BARBERÍA BLACK</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#horario">Horario</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
   <main>
-    <div class="hero">
-      <p>BIENVENIDO A BARBERÍA BLACK</p>
-      <h1>Tu estilo, tu identidad.</h1>
-      <p>Descubre nuestros servicios y encuentra tu próximo estilo.</p>
-      <a class="btn" href="#servicios">Ver servicios</a>
-    </div>
+    <section class="hero" id="inicio">
+      <div>
+        <h1>ESTILO BLACK</h1>
+        <p>Tu imagen, tu estilo, tu identidad.</p>
+        <a class="btn" href="#servicios">VER SERVICIOS</a>
+      </div>
+    </section>
 
     <section id="servicios">
-      <h2>Nuestros servicios</h2>
+      <h2>NUESTROS SERVICIOS</h2>
       <div class="services">
-        <article class="service">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80" alt="Corte de cabello">
           <h3>Corte clásico</h3>
-          <p>Un estilo limpio para cualquier ocasión.</p>
+          <p>Un estilo limpio y elegante.</p>
+          <p class="price">$120 MXN</p>
         </article>
-        <article class="service">
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80" alt="Corte moderno">
           <h3>Fade</h3>
-          <p>Un degradado moderno y personalizado.</p>
+          <p>Un acabado moderno y preciso.</p>
+          <p class="price">$150 MXN</p>
         </article>
-        <article class="service">
-          <h3>Barba</h3>
-          <p>Perfilado y arreglo de barba.</p>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80" alt="Servicio de barbería">
+          <h3>Arreglo de barba</h3>
+          <p>Detalles que completan tu estilo.</p>
+          <p class="price">$80 MXN</p>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>Visítanos</h2>
-      <p><p>¿Listo para renovar tu estilo? Conoce nuestros servicios y elige tu próximo look.</p></p><a class="btn" href="#servicios">Ver nuestros servicios</a>
-      <p>Esta página es una demostración de MANDO WEB STUDIO.</p>
+    <section id="galeria">
+      <h2>ESTILO Y DETALLES</h2>
+      <div class="gallery">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80" alt="Inspiración de barbería">
+          <h3>Estilo profesional</h3>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80" alt="Interior y trabajo de barbería">
+          <h3>Calidad en cada corte</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="horario">
+      <h2>HORARIO DE ATENCIÓN</h2>
+      <div class="info">
+        <p>Lunes a domingo</p>
+        <p class="gold"><strong>10:00 a. m. – 8:00 p. m.</strong></p>
+        <p>Horario de ejemplo para esta página de demostración.</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>RESERVA TU CITA</h2>
+      <div class="info">
+        <p>¿Listo para renovar tu estilo?</p>
+        <p class="gold"><strong>WhatsApp de prueba: sin número configurado</strong></p>
+        <p>Este botón es una demostración. Para activarlo, agrega el número real autorizado del negocio en el enlace del código.</p>
+        <a class="btn" href="#contacto">WHATSAPP · DEMO</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    Demo creada por MANDO WEB STUDIO
+    <p>© 2026 BARBERÍA BLACK</p>
+    <p>Diseño de demostración · MANDO WEB STUDIO</p>
   </footer>
 </body>
 </html>
