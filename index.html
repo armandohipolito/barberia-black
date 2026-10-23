@@ -318,5 +318,27 @@ nav a:hover {
     <p>© 2026 BARBERÍA BLACK</p>
     <p>Diseño de demostración · MANDO WEB STUDIO</p>
   </footer>
+
+<script>
+const secciones = document.querySelectorAll(
+  "section, .card"
+);
+
+const observador = new IntersectionObserver((entradas) => {
+  entradas.forEach((entrada) => {
+    if (entrada.isIntersecting) {
+      entrada.target.classList.add("visible");
+      observador.unobserve(entrada.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+secciones.forEach((seccion) => {
+  seccion.classList.add("seccion-animada");
+  observador.observe(seccion);
+});
+</script>
 </body>
 </html>
