@@ -144,7 +144,75 @@
       border-top: 1px solid #3b3020;
       color: #bbb;
     }
-  </style>
+  /* ANIMACIONES PROFESIONALES BLACK */
+
+body {
+  animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #d6ad60;
+  transform: translateY(-3px);
+}
+
+.card {
+  transition: transform 0.35s ease, border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #d6ad60;
+  box-shadow: 0 8px 25px #d6ad6033;
+}
+
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #d6ad6077;
+}
+
+.logo {
+  text-shadow: 0 0 15px #d6ad6044;
+}
+
+.hero h1 {
+  animation: brillo 3s ease-in-out infinite alternate;
+}
+
+@keyframes brillo {
+  from {
+    text-shadow: 0 0 5px #d6ad6044;
+  }
+  to {
+    text-shadow: 0 0 22px #d6ad60aa;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}</style>
 </head>
 
 <body>
